@@ -94,9 +94,7 @@ class APIGetToken(APIView):
             )
         if data.get("confirmation_code") == user.confirmation_code:
             token = RefreshToken.for_user(user).access_token
-            return Response(
-                {"token": str(token)}, status=status.HTTP_201_CREATED
-            )
+            return Response({"token": str(token)}, status=status.HTTP_201_CREATED)
         return Response(
             {"confirmation_code": "Неверный код подтверждения!"},
             status=status.HTTP_400_BAD_REQUEST,
