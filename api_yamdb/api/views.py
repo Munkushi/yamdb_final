@@ -7,11 +7,8 @@ from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
-from rest_framework.permissions import (
-    SAFE_METHODS,
-    IsAuthenticated,
-    IsAuthenticatedOrReadOnly,
-)
+from rest_framework.permissions import (SAFE_METHODS, IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -19,23 +16,13 @@ from reviews.models import Category, Genre, Review, Title, User
 
 from .filters import TitleFilters
 from .mixins import MixinForMainModels
-from .permissions import (
-    AdminOnly,
-    AdminOrReadOnly,
-    IsAuthorOrHasRightsOrReadOnly,
-)
-from .serializers import (
-    CategoriesSerializer,
-    CommentsSerializer,
-    GenresSerializer,
-    GetTokenSerializer,
-    NotAdminSerializer,
-    ReviewSerializer,
-    SignUpSerializer,
-    TitleCreateSerializer,
-    TitlesReadSerializer,
-    UsersSerializer,
-)
+from .permissions import (AdminOnly,AdminOrReadOnly,
+                        IsAuthorOrHasRightsOrReadOnly)
+from .serializers import (CategoriesSerializer,CommentsSerializer,
+                        GenresSerializer, GetTokenSerializer,
+                        NotAdminSerializer, ReviewSerializer,
+                        SignUpSerializer, TitleCreateSerializer,
+                        TitlesReadSerializer, UsersSerializer)
 
 
 class UsersViewSet(viewsets.ModelViewSet):
