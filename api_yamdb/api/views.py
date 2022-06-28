@@ -16,13 +16,13 @@ from reviews.models import Category, Genre, Review, Title, User
 
 from .filters import TitleFilters
 from .mixins import MixinForMainModels
-from .permissions import (AdminOnly,AdminOrReadOnly,
-                        IsAuthorOrHasRightsOrReadOnly)
-from .serializers import (CategoriesSerializer,CommentsSerializer,
-                        GenresSerializer, GetTokenSerializer,
-                        NotAdminSerializer, ReviewSerializer,
-                        SignUpSerializer, TitleCreateSerializer,
-                        TitlesReadSerializer, UsersSerializer)
+from .permissions import (AdminOnly, AdminOrReadOnly,
+                          IsAuthorOrHasRightsOrReadOnly)
+from .serializers import (CategoriesSerializer, CommentsSerializer,
+                          GenresSerializer, GetTokenSerializer,
+                          NotAdminSerializer, ReviewSerializer,
+                          SignUpSerializer, TitleCreateSerializer,
+                          TitlesReadSerializer, UsersSerializer)
 
 
 class UsersViewSet(viewsets.ModelViewSet):

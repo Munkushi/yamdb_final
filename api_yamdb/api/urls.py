@@ -1,10 +1,11 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from .views import (APIGetToken,APISignup,
+from .views import (APIGetToken, APISignup,
                     CategoriesViewSet, CommentsViewSet,
                     GenresViewSet, ReviewViewSet,
                     TitlesViewSet, UsersViewSet)
+
 
 router_v1 = routers.DefaultRouter()
 router_v1.register(
