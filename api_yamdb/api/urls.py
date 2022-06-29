@@ -4,7 +4,6 @@ from rest_framework import routers
 from .views import (APIGetToken, APISignup, CategoriesViewSet, CommentsViewSet,
                     GenresViewSet, ReviewViewSet, TitlesViewSet, UsersViewSet)
 
-
 router_v1 = routers.DefaultRouter()
 router_v1.register(
     r"titles/(?P<title_id>\d+)/reviews", ReviewViewSet, basename="reviews")
