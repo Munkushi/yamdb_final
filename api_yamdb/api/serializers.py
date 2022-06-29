@@ -56,6 +56,19 @@ class CategoriesSerializer(serializers.ModelSerializer):
         lookup_field = "slug"
 
 
+class TitlesReadSerializer(serializers.ModelSerializer):
+    """Серилизатор для Titles."""
+
+    genre = GenresSerializer(many=True, read_only=True)
+    category = CategoriesSerializer(read_only=True)
+    # вернется сам результат
+    rating = serializers.IntegerField(read_only=True, required=False)
+
+    class Meta:
+        model = Title
+        fields = "__all__"
+
+
 class TitleCreateSerializer(serializers.ModelSerializer):
     """Серилизатор для создания тайтла."""
 
