@@ -1,6 +1,6 @@
 ![example workflow](https://github.com/Munkushi/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-## API для проекта api_yamdb
+## API для проекта yamdb_final
 
 **Как запустить проект:**
 
@@ -45,7 +45,7 @@ DB_PORT=5432
 **Как запускать проект?**
 
 ```
-cd infra/
+cd api_yamdb/
 docker-compose up
 ```
 
