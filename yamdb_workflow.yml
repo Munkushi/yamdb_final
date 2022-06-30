@@ -56,13 +56,11 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
+        key: ${{ secrets.SECRET_SSH }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          apt update && apt install sudo
-          sudo docker pull munkushi/yamdb_final
           sudo docker-compose stop
-          sudo docker-compose rm web
+          sudo docker compose rm web
           touch .env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
